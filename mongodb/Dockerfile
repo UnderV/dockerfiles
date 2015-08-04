@@ -1,6 +1,8 @@
 ############################################################
 # Dockerfile to build MongoDB container images
 # Based on Ubuntu 14.04 LTS
+# GNU LESSER GENERAL PUBLIC LICENSE Version 3
+# Use without limitations, even for commercial purposes.
 ############################################################
 
 # Set the base image to Ubuntu
