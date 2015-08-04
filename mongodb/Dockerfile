@@ -65,6 +65,3 @@ EXPOSE 27017 28017
 # Default port to execute the entrypoint (MongoDB)
 # CMD ["--port 27017"]
 CMD /usr/local/sbin/mongodb-startup.sh
-
-# Set default container command
-#ENTRYPOINT "usr/bin/mongod"
