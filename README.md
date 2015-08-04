@@ -41,7 +41,7 @@ sudo apt-get install git docker.io
     ```
     sudo docker run -d -v /opt/mongodb:/data -p 127.0.0.1:27017:27017 -p 127.0.0.1:28017:28017 --name mongodb-container mongodb-image
     ```
-7. **You can stop or start Your new Container**
+7. **You can stop or start Your new Container**  
     ```
     docker stop mongodb-container
     docker start mongodb-container
