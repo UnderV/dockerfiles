@@ -21,6 +21,6 @@ sudo apt-get install docker.io
     ```sudo mkdir db  
     sudo mkdir logs```
 3. Get dockerfiles:  
-    ```git clone https://github.com/UnderV/dockerfiles``
+    ```git clone https://github.com/UnderV/dockerfiles```
 5. sdf
 6. d
