@@ -17,7 +17,7 @@ Ubuntu 14.04 and newer:
 sudo apt-get install git docker.io
 ```
 
-# How to create MongoDB container? Easy.
+# How to create MongoDB container? Very Easy.
 1. **Create some dir:**  
     ```
     sudo mkdir /opt/mongodb
