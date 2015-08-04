@@ -32,12 +32,12 @@ sudo apt-get install git docker.io
     ```
     sudo git clone https://github.com/UnderV/dockerfiles
     ```
-5. **Build Docker image**  
+5. **Build Docker image:**  
     ```
     cd dockerfiles/mongodb/
     sudo docker build -t mongodb-image .
     ```
-6. **Create container**  
+6. **Create container:**  
     ```
     sudo docker run -d -v /opt/mongodb:/data/db -p 127.0.0.1:27017:27017 -p 28017:28017 --name mongodb-container mongodb-image
     ```
