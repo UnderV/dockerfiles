@@ -15,7 +15,7 @@
     ```
 5. **Build Docker image:**  
     ```
-    cd dockerfiles/mongodb/
+    cd dockerfiles/mongodb/  
     sudo docker build -t mongodb-image .
     ```
 6. **Create container (this example allow only local connections. 27017 - mongodb, 28017 - mongodb web. If You need public access then delete "127.0.0.1:"):**  
