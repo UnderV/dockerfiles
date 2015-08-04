@@ -1,4 +1,4 @@
-# py3tools
+# Dockerfiles by Andris Veldrajs
 ### License
 GNU LESSER GENERAL PUBLIC LICENSE Version 3  
 Use without limitations, even for commercial purposes.
