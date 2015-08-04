@@ -15,8 +15,8 @@ sudo apt-get install docker.io
 
 # How to create MongoDB container? Easy.
 1. Create some dir:  
-    sudo mkdir /opt/mongodb
-    cd /opt/mongodb
+    ```sudo mkdir /opt/mongodb
+    cd /opt/mongodb```
 2. Create subdirectories for database and logfiles:  
     sudo mkdir db  
     sudo mkdir logs  
