@@ -28,7 +28,7 @@ sudo apt-get install git docker.io
     sudo mkdir db  
     sudo mkdir logs
     ```
-3. **Get dockerfiles:**
+3. **Get dockerfiles:**  
     ```
     sudo git clone https://github.com/UnderV/dockerfiles
     ```
