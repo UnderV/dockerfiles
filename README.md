@@ -18,9 +18,9 @@ sudo apt-get install docker.io
     ```sudo mkdir /opt/mongodb
     cd /opt/mongodb```
 2. Create subdirectories for database and logfiles:  
-    sudo mkdir db  
-    sudo mkdir logs  
+    ```sudo mkdir db  
+    sudo mkdir logs```
 3. Get dockerfiles:  
-    git clone https://github.com/UnderV/dockerfiles
+    ```git clone https://github.com/UnderV/dockerfiles``
 5. sdf
 6. d
