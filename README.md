@@ -18,17 +18,17 @@ sudo apt-get install git docker.io
 ```
 
 # How to create MongoDB container? Easy.
-1. *Create some dir:*  
+1. **Create some dir:**  
     ```
     sudo mkdir /opt/mongodb
     cd /opt/mongodb
     ```
-2. *Create subdirectories for database and logfiles:*  
+2. **Create subdirectories for database and logfiles:**  
     ```
     sudo mkdir db  
     sudo mkdir logs
     ```
-3. *Get dockerfiles:*
+3. **Get dockerfiles:**
     ```
     sudo git clone https://github.com/UnderV/dockerfiles
     ```
