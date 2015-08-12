@@ -49,12 +49,39 @@ WORKDIR /data
 RUN mkdir -p /data/db
 RUN mkdir -p /data/logs
 
-# Devine environment variables for startup script
-ENV MONGODB_DATA_PATH /data/db
-ENV MONGODB_LOGS_PATH /data/logs
-ENV MONGODB_MAIN_PORT 27017
-ENV MONGOD_CONFIG_FILE /usr/local/etc/mongod.conf
+# Define environment variables for startup script
+ENV DATA_PATH /data/db
+ENV CONFIG_FILE /usr/local/etc/mongod.conf
+ENV LOGS_PATH /data/logs/mongod.log
+ENV MAIN_PORT 27017
+# LogAppend will write all logs to one file specified in LOGS_PATH.
+# If LogAppend is disabled then on each start new log is started.
+#   Old log are renamed with addition of timestamp.
+ENV ENABLE_LOGAPPEND False
+# If You need to enable http interface then change to True.
+ENV ENABLE_HTTP_INTERFACE False
+# If You want to disable authentication then change to False.
+ENV ENABLE_AUTH True
 
+# Specify binding IP address. Default value: 0.0.0.0
+# ENV BIND_IP 0.0.0.0
+
+# Set StorageEngine - default = MMAPv1
+# WiredTiger (from MongoDB v3) - more granular concurrency control and native
+#   compression will provide significant benefits in the areas of lower
+#   storage costs, greater hardware utilization, and more predictable performance.
+#   Compression reduces storage footprint by as much as 80%, and enables higher
+#   storage I/O scalability as fewer bits are read from disk.
+# Options: mmapv1 or wiredTiger. Default value: mmapv1
+ENV STORAGE_ENGINE wiredTiger
+# Options: none, snappy or zlib
+# Ignored if mmapv1 is used
+ENV WIREDTIGER_JOURNAL_COMPRESSOR snappy
+# Options: none, snappy or zlib
+# Ignored if mmapv1 is used
+ENV WIREDTIGER_COLLECTION_BLOCK_COMPRESSOR snappy
+
+##################### COPY FILES ###########################
 ADD mongodb-startup.sh /usr/local/sbin/mongodb-startup.sh
 ADD mongod.conf /usr/local/etc/mongod.conf
 RUN chmod 755 /usr/local/sbin/mongodb-startup.sh
